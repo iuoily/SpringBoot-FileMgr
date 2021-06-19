@@ -1,0 +1,35 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>文件上传</title>
+  <script>
+    //判断是否填写上传人并已选择上传文件
+    function check() {
+      var name = document.getElementById("name").value;
+      var file = document.getElementById("file").value;
+      if(name==""){
+        alert("请填写上传人！");
+        return false;
+      }
+      if(file.length==0||file==""){
+        alert("请选择要上传的文件！");
+        return false;
+      }
+      return true;
+
+    }
+  </script>
+</head>
+<body>
+<!-- enctype：表单数据发送编码 -->
+<form action="/fileUpload2" method="post" enctype="multipart/form-data" onsubmit="return check()">
+  上传人：<input id="name" type="text" name="name"><br>
+  <!-- multiple代表可以上传多个文件 -->
+  请上传文件：<input id="file" type="file" name="uploadfile" multiple="multiple"><br>
+  <input type="submit" value="上传"><br>
+</form>
+</body>
+</html>
