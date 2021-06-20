@@ -14,11 +14,11 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class FileUploadController {
-	@RequestMapping("/fileUpload")
-	public String file() {
+	@RequestMapping("/fileU")
+	public String fileU() {
 		return "fileUpload";
 	}
-@RequestMapping("/fileUpload2")
+@RequestMapping("/fileUpload")
 public String Upload(@RequestParam("name") String name,@RequestParam("uploadfile") List<MultipartFile> uploadfile,HttpServletRequest request) {
 		//判断上传的文件是否存在
 	if(!uploadfile.isEmpty()&&uploadfile.size()>0) {
@@ -29,7 +29,7 @@ public String Upload(@RequestParam("name") String name,@RequestParam("uploadfile
 			//___________________________
 			System.out.println(fileName);
 			//设置文件上传的路径
-			String dirPath=request.getServletContext().getRealPath("/upload/");
+			String dirPath="D:/新建文件夹/upload/";
 			//______________________________
 			System.out.println(dirPath);
 		File filePath =	new File(dirPath);
