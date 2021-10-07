@@ -23,7 +23,7 @@ public class FileDownloadController {
         @RequestMapping("/download")
     public ResponseEntity<byte[]> fileDownload(String filename,HttpServletRequest request)throws Exception{
             //指定文件下载的路径
-            String path = "D:/新建文件夹/upload/";
+            String path = "C:\\Users\\Administrator\\Desktop\\";
             //创建该文件对象 File.separator代表文件间隔符("/"或“\”,解决不同平台兼容性问题)
             File file = new File(path + File.separator + filename);
             //对文件名编码，防止中文乱码
