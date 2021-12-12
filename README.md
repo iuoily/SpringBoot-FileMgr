@@ -1,2 +1,2 @@
 # SpringBoot-FileMgr
-Based on SpringBpot developed a Java Web file manager.
+Based on SpringBoot developed a Java Web file manager system.
