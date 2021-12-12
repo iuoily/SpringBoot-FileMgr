@@ -14,7 +14,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class FileUploadController {
-	@RequestMapping("/fileU")
+	@RequestMapping("/")
 	public String fileU() {
 		return "fileUpload";
 	}
@@ -29,7 +29,7 @@ public String Upload(@RequestParam("name") String name,@RequestParam("uploadfile
 			//___________________________
 			System.out.println(fileName);
 			//设置文件上传的路径
-			String dirPath="C:\\Users\\Administrator\\Desktop\\";
+			String dirPath="E:\\FileCenter\\test\\";
 			//______________________________
 			System.out.println(dirPath);
 		File filePath =	new File(dirPath);

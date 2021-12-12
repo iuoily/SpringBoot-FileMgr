@@ -13,4 +13,9 @@ class SpringMvcFileApplicationTests {
         System.out.println(File.separator);
     }
 
+    @Test
+    void testLogger() {
+
+    }
+
 }

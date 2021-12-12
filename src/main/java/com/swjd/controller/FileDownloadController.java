@@ -23,7 +23,7 @@ public class FileDownloadController {
         @RequestMapping("/download")
     public ResponseEntity<byte[]> fileDownload(String filename,HttpServletRequest request)throws Exception{
             //指定文件下载的路径
-            String path = "C:\\Users\\Administrator\\Desktop\\";
+            String path = "E:\\FileCenter\\test\\";
             //创建该文件对象 File.separator代表文件间隔符("/"或“\”,解决不同平台兼容性问题)
             File file = new File(path + File.separator + filename);
             //对文件名编码，防止中文乱码
@@ -49,7 +49,7 @@ public class FileDownloadController {
         String userAgent = request.getHeader("User-Agent");
         for (String keyWord : IEBrowserKeyWords) {
             if (userAgent.contains(keyWord)) {
-                //IE内核浏览器，统一为UTDF-8显示
+                //IE内核浏览器，统一为UTF-8显示
                 return URLEncoder.encode(filename, "UTF-8");
             }
         }
